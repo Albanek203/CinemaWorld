@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UI", "UI\UI.csproj", "{63C46CB9-06E5-4689-91F0-725D3935102F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DLL", "DLL\DLL.csproj", "{F684E3AE-1AAA-4619-9BA9-B9A5FBB88927}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{1FD3AD20-961D-46E6-8F5B-23165ED6187A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{63C46CB9-06E5-4689-91F0-725D3935102F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63C46CB9-06E5-4689-91F0-725D3935102F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63C46CB9-06E5-4689-91F0-725D3935102F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63C46CB9-06E5-4689-91F0-725D3935102F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F684E3AE-1AAA-4619-9BA9-B9A5FBB88927}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F684E3AE-1AAA-4619-9BA9-B9A5FBB88927}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F684E3AE-1AAA-4619-9BA9-B9A5FBB88927}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F684E3AE-1AAA-4619-9BA9-B9A5FBB88927}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1FD3AD20-961D-46E6-8F5B-23165ED6187A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FD3AD20-961D-46E6-8F5B-23165ED6187A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FD3AD20-961D-46E6-8F5B-23165ED6187A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FD3AD20-961D-46E6-8F5B-23165ED6187A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
