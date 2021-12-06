@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Data.SqlTypes;
 
 namespace DLL.Models {
     public class ActionsData {
@@ -8,7 +7,7 @@ namespace DLL.Models {
         public User?    User           { get; set; }
         public int      TypeOperation  { get; set; }
         public int      ObjectDataType { get; set; }
-        public SqlMoney Cost           { get; set; }
+        public int      Cost           { get; set; }
         public DateTime Time           { get; set; }
     }
 }

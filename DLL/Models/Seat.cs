@@ -1,10 +1,9 @@
-﻿using System.Data.SqlTypes;
-
-namespace DLL.Models {
+﻿namespace DLL.Models {
     public class Seat {
-        public int      Id     { get; set; }
-        public int      Number { get; set; }
-        public SqlMoney Price  { get; set; }
-        public int      Status { get; set; }
+        public int      Id      { get; set; }
+        public int      Number  { get; set; }
+        public int      Price   { get; set; }
+        public int      Status  { get; set; }
+        public Session? Session { get; set; }
     }
 }
