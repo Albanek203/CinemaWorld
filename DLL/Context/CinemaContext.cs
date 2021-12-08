@@ -6,7 +6,6 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 namespace DLL.Context {
     public class CinemaContext : DbContext {
         public CinemaContext(DbContextOptions<CinemaContext> options) : base(options) {
-            Database.EnsureDeleted();
             Database.EnsureCreated();
         }
 
