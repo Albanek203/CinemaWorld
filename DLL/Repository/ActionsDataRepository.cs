@@ -20,8 +20,8 @@ namespace DLL.Repository {
 
         public override async Task<IReadOnlyCollection<ActionsData>> FindByConditionAsync(
             Expression<Func<ActionsData, bool>> predicate) {
-            return await Entities.Include(user => user.User)
-                                 .Where(predicate)
+            return await Entities.Where(predicate)
+                                 .Include(user => user.User)
                                  .ToListAsync()
                                  .ConfigureAwait(false);
         }

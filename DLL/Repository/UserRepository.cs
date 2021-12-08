@@ -22,10 +22,10 @@ namespace DLL.Repository {
 
         public override async Task<IReadOnlyCollection<User>> FindByConditionAsync(
             Expression<Func<User, bool>> predicate) {
-            return await Entities.Include(person => person.Person)
+            return await Entities.Where(predicate)
+                                 .Include(person => person.Person)
                                  .Include(loginData => loginData.LoginData)
                                  .Include(actionsDatas => actionsDatas.ActionsData)
-                                 .Where(predicate)
                                  .ToListAsync()
                                  .ConfigureAwait(false);
         }

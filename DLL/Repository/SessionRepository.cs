@@ -21,9 +21,9 @@ namespace DLL.Repository {
 
         public override async Task<IReadOnlyCollection<Session>> FindByConditionAsync(
             Expression<Func<Session, bool>> predicate) {
-            return await Entities.Include(film => film.Film)
+            return await Entities.Where(predicate)
+                                 .Include(film => film.Film)
                                  .Include(seats => seats.Seats)
-                                 .Where(predicate)
                                  .ToListAsync()
                                  .ConfigureAwait(false);
         }
