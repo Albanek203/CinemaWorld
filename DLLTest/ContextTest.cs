@@ -109,7 +109,7 @@ namespace DLLTest {
         [Fact]
         public void CheckSeatAdd() {
             try {
-                _context.Seats.Add(new Seat {Number = 2, Price = 100, Status = 2});
+                _context.Seats.Add(new Seat {Number = 2, Price = 100, Status = 2, Session = new Session()});
                 _context.SaveChanges();
             }
             catch (Exception e) { Assert.False(false, e.Message); }
@@ -119,7 +119,7 @@ namespace DLLTest {
         [Fact]
         public void CheckSessionAdd() {
             try {
-                _context.Sessions.Add(new Session {HallNumber = 321, DateSession = DateTime.Now});
+                _context.Sessions.Add(new Session {HallNumber = 321, DateSession = new DateTime(2021,10,13,15,15,0)});
                 _context.SaveChanges();
             }
             catch (Exception e) { Assert.False(false, e.Message); }
