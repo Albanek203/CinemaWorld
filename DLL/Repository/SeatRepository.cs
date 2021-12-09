@@ -25,5 +25,12 @@ namespace DLL.Repository {
                                  .ToListAsync()
                                  .ConfigureAwait(false);
         }
+
+        public async Task ChangeStatusSeatAsync(Expression<Func<Seat, bool>> predicate,int status) {
+            var model = await Entities.Where(predicate).FirstAsync();
+            model.Status = status;
+            Entities.Update(model);
+            await CinemaContext.SaveChangesAsync();
+        }
     }
 }
