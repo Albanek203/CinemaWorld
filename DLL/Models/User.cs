@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace DLL.Models {
+﻿namespace DLL.Models {
     public class User {
         public int                Id          { get; set; }
         public int                PersonId    { get; set; }

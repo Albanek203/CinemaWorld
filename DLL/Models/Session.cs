@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace DLL.Models {
+﻿namespace DLL.Models {
     public class Session {
         public int         Id          { get; set; }
         public int         HallNumber  { get; set; }
