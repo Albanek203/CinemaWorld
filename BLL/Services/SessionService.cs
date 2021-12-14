@@ -1,5 +1,9 @@
-﻿namespace BLL.Services; 
+﻿using DLL.Repository;
+
+namespace BLL.Services;
 
 public class SessionService {
-    public void addsesion(){}
+    private readonly SessionRepository _repository;
+    public SessionService(SessionRepository repository) { _repository = repository; }
+    public async void AddSession() { }
 }
