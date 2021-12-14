@@ -30,7 +30,7 @@ namespace UI {
         private void App_OnStartup(object sender, StartupEventArgs e) {
             // Initialize themes
             var viewModelTheme = ServiceProvider.GetService<ThemeViewModel>();
-            ServiceProvider.GetService<MainWindow>()!.Show();
+            ServiceProvider.GetService<LoginWindow>()!.Show();
         }
     }
 }
