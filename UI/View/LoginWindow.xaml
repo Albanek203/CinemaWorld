@@ -1,0 +1,96 @@
+﻿<Window x:Class="UI.View.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:p="clr-namespace:UI.Properties"
+        mc:Ignorable="d"
+        AllowsTransparency="True"
+        Background="Transparent"
+        WindowStartupLocation="CenterScreen"
+        Style="{DynamicResource WindowStyle}"
+        Height="450" Width="600">
+
+    <Window.Resources>
+        <ResourceDictionary Source="Themes/Dark.xaml" />
+    </Window.Resources>
+
+    <Border Style="{DynamicResource BackgroundBorderStyle}"
+            CornerRadius="0,0,30,30"
+            MouseLeftButtonDown="UILogin_OnMouseDown">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <StackPanel Grid.Row="0" Orientation="Horizontal"
+                        HorizontalAlignment="Right">
+                <Button Style="{DynamicResource CollapseButtonStyle}"
+                        Click="ButtonCollapse_OnClick" />
+                <Button Style="{DynamicResource CloseButtonStyle}"
+                        Click="ButtonClose_OnClick" />
+            </StackPanel>
+
+            <Border Grid.Row="1" Background="Transparent"
+                    Margin="60,20"
+                    CornerRadius="90">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="3*" />
+                        <RowDefinition Height="2*" />
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Row="0"
+                               Text="{x:Static p:Resources.Authorization}"
+                               TextAlignment="Center"
+                               FontSize="30"
+                               FontWeight="Bold"
+                               Foreground="WhiteSmoke"
+                               VerticalAlignment="Center" />
+                    <StackPanel Grid.Row="1"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center">
+                        <Border Style="{DynamicResource InputBorderStyle}">
+                            <StackPanel Orientation="Horizontal">
+                                <materialDesign:PackIcon Kind="User" Width="30" Height="30"
+                                                         Style="{DynamicResource PickIconStyle}" />
+                                <TextBox Name="TxtUserLogin"
+                                         Width="250"
+                                         materialDesign:HintAssist.Hint="Enter Login / Email"
+                                         Style="{DynamicResource InputTextBoxStyle}" />
+                            </StackPanel>
+                        </Border>
+                        <Border Style="{DynamicResource InputBorderStyle}">
+                            <StackPanel Orientation="Horizontal">
+                                <materialDesign:PackIcon Kind="Lock" Width="30" Height="30"
+                                                         Style="{DynamicResource PickIconStyle}" />
+                                <PasswordBox Name="TxtUserPassword"
+                                             Width="250"
+                                             materialDesign:HintAssist.Hint="Enter Password"
+                                             Style="{DynamicResource InputPasswordBoxStyle}" />
+                            </StackPanel>
+                        </Border>
+                    </StackPanel>
+                    <StackPanel Grid.Row="2">
+                        <TextBlock Name="TxtException"
+                                   TextWrapping="NoWrap"
+                                   Style="{DynamicResource ExceptionTextStyle}" />
+                        <Button Content="Login"
+                                Height="45"
+                                Width="200"
+                                Margin="0,15"
+                                materialDesign:ButtonAssist.CornerRadius="20"
+                                Style="{DynamicResource ButtonStyle}"
+                                Click="ButtonLogin_OnClick" />
+                        <CheckBox Name="IsSaveUser"
+                                  Content="Save user"
+                                  HorizontalAlignment="Center"
+                                  Style="{DynamicResource CheckBoxStyle}" />
+                    </StackPanel>
+                </Grid>
+            </Border>
+        </Grid>
+    </Border>
+</Window>

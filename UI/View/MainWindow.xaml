@@ -1,0 +1,53 @@
+﻿<Window x:Class="UI.View.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Style="{DynamicResource WindowStyle}"
+        Width="1280" Height="720">
+
+    <Window.Resources>
+        <ResourceDictionary Source="Themes/Dark.xaml" />
+    </Window.Resources>
+
+    <Border Style="{DynamicResource BackgroundBorderStyle}"
+            MouseLeftButtonDown="UIMain_OnMouseDown">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Border Grid.Column="0"
+                    Background="#99101010">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Row="0"
+                               Text="Options"
+                               Style="{DynamicResource TitleTextStyle}" />
+                    <ScrollViewer Grid.Row="1"
+                                  VerticalScrollBarVisibility="Auto">
+                        <StackPanel HorizontalAlignment="Center"
+                                    VerticalAlignment="Center">
+                            <Button ToolTip="Tickets"
+                                    Height="60"
+                                    Background="Transparent"
+                                    BorderThickness="0">
+                                <materialDesign:PackIcon Kind="Ticket" Width="50" Height="50"
+                                                         Style="{DynamicResource PickIconStyle}" />
+                            </Button>
+                        </StackPanel>
+                    </ScrollViewer>
+                </Grid>
+
+            </Border>
+            <Frame Grid.Column="1" Name="PagesFrame"
+                   NavigationUIVisibility="Hidden" />
+        </Grid>
+    </Border>
+</Window>
