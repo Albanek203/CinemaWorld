@@ -12,7 +12,6 @@ namespace UI.View {
         public LoginWindow(LoginService loginService) {
             InitializeComponent();
             _loginService = loginService;
-            MessageBox.Show(Directory.GetCurrentDirectory());
         }
 
 #region Window Control
