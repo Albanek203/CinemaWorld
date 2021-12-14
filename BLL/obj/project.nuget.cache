@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "m2d9uUINUKLffzTEF16xbvqStiZn+px3enllJv1CqaL7Nh0VaDXw2S0qIzQeASPz5t2KRoTxKJuaHsRaMO2KcA==",
+  "dgSpecHash": "+R6i0EYORlbjENh2pkS2kDF4VxwadC1gwYMdMPUOIhaPDKDjnEhmO9MLFa0wnwCgxjdcLYn/y4D1T0nBmZZhRA==",
   "success": true,
   "projectFilePath": "D:\\Programing\\Projects\\CinemaWorld\\BLL\\BLL.csproj",
   "expectedPackageFiles": [
@@ -15,6 +15,7 @@
     "C:\\Users\\olegl\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\olegl\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
     "C:\\Users\\olegl\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
+    "C:\\Users\\olegl\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\olegl\\.nuget\\packages\\system.collections.immutable\\6.0.0\\system.collections.immutable.6.0.0.nupkg.sha512",
     "C:\\Users\\olegl\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.0\\system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",
     "C:\\Users\\olegl\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
