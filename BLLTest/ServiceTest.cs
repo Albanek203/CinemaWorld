@@ -17,6 +17,7 @@ namespace BLLTest {
         private readonly ActionsDataRepository _actionsDataRepository;
         private readonly SessionRepository     _sessionRepository;
         private readonly LoginDataRepository   _loginDataRepository;
+        private readonly FilmRepository        _filmRepository;
         public ServiceTest() {
             var optionBuilder = new DbContextOptionsBuilder<CinemaContext>();
             var option =
@@ -27,6 +28,7 @@ namespace BLLTest {
             _actionsDataRepository = new ActionsDataRepository(_context);
             _sessionRepository = new SessionRepository(_context);
             _loginDataRepository = new LoginDataRepository(_context);
+            _filmRepository = new FilmRepository(_context);
         }
         [Fact]
         public async void CheckTicketService() {
@@ -50,6 +52,12 @@ namespace BLLTest {
             var loginService = new LoginService(_loginDataRepository);
             var user = await loginService.Login("albanekpiss@gmail.com", "strongpassbymy24");
             Assert.NotNull(user);
+        }
+        [Fact]
+        public async void CheckSessionService() {
+            var sessionService = new SessionService(_sessionRepository, _seatRepository, _filmRepository);
+            var success = await sessionService.AddSession(321, "w", new DateTime(2021, 12, 07, 20, 0, 6));
+            Assert.True(success);
         }
     }
 }
