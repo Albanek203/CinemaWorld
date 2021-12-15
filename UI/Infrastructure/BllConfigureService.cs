@@ -30,6 +30,8 @@ namespace UI.Infrastructure {
             // Services
             services.AddTransient<LoginService>();
             services.AddTransient<TicketService>();
+            services.AddTransient<SessionService>();
+            services.AddTransient<FilmService>();
         }
     }
 }
