@@ -72,7 +72,9 @@ namespace DLLTest {
                                          , Is3D = false
                                          , Rating = 3
                                          , Price = 2999
+                                         , Session = new Session()
                                    });
+                _context.SaveChangesAsync();
             }
             catch (Exception e) { Assert.False(false, e.Message); }
             var obj = _context.Films.Where(x => x.Name == "TestFilm");
@@ -119,7 +121,9 @@ namespace DLLTest {
         [Fact]
         public void CheckSessionAdd() {
             try {
-                _context.Sessions.Add(new Session {HallNumber = 321, DateSession = new DateTime(2021,10,13,15,15,0)});
+                _context.Sessions.Add(new Session {
+                        HallNumber = 321, DateSession = new DateTime(2021, 10, 13, 15, 15, 0)
+                });
                 _context.SaveChanges();
             }
             catch (Exception e) { Assert.False(false, e.Message); }
