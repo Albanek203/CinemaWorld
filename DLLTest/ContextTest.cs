@@ -9,7 +9,7 @@ using Xunit;
 namespace DLLTest {
     public class ContextTest {
         private const string ConnectString =
-                "Data Source=GARGULYA;Initial Catalog=CinemaDbTest;Integrated Security=True;Connect Timeout=30";
+                @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=CinemaDbTest;Integrated Security=True;Connect Timeout=30";
         private readonly CinemaContext _context;
         public ContextTest() {
             var optionBuilder = new DbContextOptionsBuilder<CinemaContext>();
