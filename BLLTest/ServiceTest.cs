@@ -10,7 +10,7 @@ using Xunit;
 namespace BLLTest {
     public class ServiceTest {
         private const string ConnectString =
-                "Data Source=GARGULYA;Initial Catalog=CinemaDbTest;Integrated Security=True;Connect Timeout=30";
+                @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=CinemaDbTest;Integrated Security=True;Connect Timeout=30";
         private static   CinemaContext         _context;
         private readonly UserRepository        _userRepository;
         private readonly SeatRepository        _seatRepository;
