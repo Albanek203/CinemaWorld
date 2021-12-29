@@ -18,7 +18,25 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-    <data name="Authorization" xml:space="preserve">
+    <data name="TAuthorization" xml:space="preserve">
         <value>Authorization</value>
+    </data>
+    <data name="TLogin" xml:space="preserve">
+        <value>Login</value>
+    </data>
+    <data name="TSaveUser" xml:space="preserve">
+        <value>Save user</value>
+    </data>
+    <data name="TM_E_N_U" xml:space="preserve">
+        <value>M E N U</value>
+    </data>
+    <data name="THome" xml:space="preserve">
+        <value>Home</value>
+    </data>
+    <data name="TSessions" xml:space="preserve">
+        <value>Sessions</value>
+    </data>
+    <data name="TLog_out" xml:space="preserve">
+        <value>Log out</value>
     </data>
 </root>
