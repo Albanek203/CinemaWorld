@@ -1,24 +1,24 @@
-﻿<Window x:Class="UI.View.LoginWindow"
+﻿<Window x:Class="UI.View.LoginView"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-        xmlns:p="clr-namespace:UI.Properties"
+        xmlns:properties="clr-namespace:UI.Properties"
         mc:Ignorable="d"
         AllowsTransparency="True"
         Background="Transparent"
         WindowStartupLocation="CenterScreen"
         Style="{DynamicResource WindowStyle}"
-        Height="450" Width="600">
-
-    <Window.Resources>
-        <ResourceDictionary Source="Themes/Dark.xaml" />
-    </Window.Resources>
+        Name="Window" Height="450" Width="600">
 
     <Border Style="{DynamicResource BackgroundBorderStyle}"
             CornerRadius="0,0,30,30"
             MouseLeftButtonDown="UILogin_OnMouseDown">
+        <Border.InputBindings>
+            <MouseBinding
+                Command="{Binding DataContext.SomeCommand}" />
+        </Border.InputBindings>
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="30" />
@@ -27,10 +27,11 @@
 
             <StackPanel Grid.Row="0" Orientation="Horizontal"
                         HorizontalAlignment="Right">
-                <Button Style="{DynamicResource CollapseButtonStyle}"
-                        Click="ButtonCollapse_OnClick" />
-                <Button Style="{DynamicResource CloseButtonStyle}"
-                        Click="ButtonClose_OnClick" />
+                <Button Command="{Binding CollapseWindow}"
+                        CommandParameter="{Binding ElementName=Window}"
+                        Style="{DynamicResource CollapseButtonStyle}" />
+                <Button Command="{Binding CloseWindow}"
+                        Style="{DynamicResource CloseButtonStyle}" />
             </StackPanel>
 
             <Border Grid.Row="1" Background="Transparent"
@@ -43,7 +44,7 @@
                         <RowDefinition Height="2*" />
                     </Grid.RowDefinitions>
                     <TextBlock Grid.Row="0"
-                               Text="{x:Static p:Resources.Authorization}"
+                               Text="{x:Static properties:Resources.TAuthorization}"
                                TextAlignment="Center"
                                FontSize="30"
                                FontWeight="Bold"
@@ -56,8 +57,8 @@
                             <StackPanel Orientation="Horizontal">
                                 <materialDesign:PackIcon Kind="User" Width="30" Height="30"
                                                          Style="{DynamicResource PickIconStyle}" />
-                                <TextBox Name="TxtUserLogin"
-                                         Width="250"
+                                <TextBox Width="250"
+                                         Text="{Binding UserLogin, UpdateSourceTrigger=PropertyChanged}"
                                          materialDesign:HintAssist.Hint="Enter Login / Email"
                                          Style="{DynamicResource InputTextBoxStyle}" />
                             </StackPanel>
@@ -74,18 +75,20 @@
                         </Border>
                     </StackPanel>
                     <StackPanel Grid.Row="2">
-                        <TextBlock Name="TxtException"
-                                   TextWrapping="NoWrap"
+                        <TextBlock TextWrapping="NoWrap"
+                                   Text="{Binding Exception}"
                                    Style="{DynamicResource ExceptionTextStyle}" />
-                        <Button Content="Login"
+                        <Button Content="{x:Static properties:Resources.TLogin}"
                                 Height="45"
                                 Width="200"
                                 Margin="0,15"
+                                Command="{Binding Authorization, UpdateSourceTrigger=PropertyChanged}"
+                                CommandParameter="{Binding ElementName=TxtUserPassword}"
                                 materialDesign:ButtonAssist.CornerRadius="20"
-                                Style="{DynamicResource ButtonStyle}"
-                                Click="ButtonLogin_OnClick" />
-                        <CheckBox Name="IsSaveUser"
-                                  Content="Save user"
+                                Style="{DynamicResource ButtonStyle}">
+                        </Button>
+                        <CheckBox Content="{x:Static properties:Resources.TSaveUser}"
+                                  IsChecked="{Binding Path=IsSaveUser, Mode=TwoWay}"
                                   HorizontalAlignment="Center"
                                   Style="{DynamicResource CheckBoxStyle}" />
                     </StackPanel>
