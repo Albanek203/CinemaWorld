@@ -4,6 +4,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:properties="clr-namespace:UI.Properties"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
         Style="{DynamicResource WindowStyle}"
@@ -46,7 +47,7 @@
                     <Grid Height="50">
                         <TextBlock Grid.Column="0"
                                    Margin="85,0,0,0"
-                                   Text="M E N U"
+                                   Text="{x:Static properties:Resources.TM_E_N_U}"
                                    FontSize="22"
                                    Background="Transparent"
                                    Style="{DynamicResource NavigateTextBlockStyle}">
@@ -114,7 +115,7 @@
                                 <materialDesign:PackIcon Kind="Home"
                                                          Width="50" Height="50"
                                                          Style="{DynamicResource PickIconStyle}" />
-                                <TextBlock Text="Home" Margin="25,0,0,0"
+                                <TextBlock Text="{x:Static properties:Resources.THome}" Margin="25,0,0,0"
                                            Style="{StaticResource NavigateTextBlockStyle}" />
                             </StackPanel>
                             <ListViewItem.InputBindings>
@@ -128,7 +129,7 @@
                                 <materialDesign:PackIcon Kind="LibraryShelves"
                                                          Width="50" Height="50"
                                                          Style="{DynamicResource PickIconStyle}" />
-                                <TextBlock Text="Sessions" Margin="25,0,0,0"
+                                <TextBlock Text="{x:Static properties:Resources.TSessions}" Margin="25,0,0,0"
                                            Style="{StaticResource NavigateTextBlockStyle}" />
                             </StackPanel>
                             <ListViewItem.InputBindings>
@@ -141,10 +142,9 @@
                             <StackPanel Orientation="Horizontal" Width="230">
                                 <materialDesign:PackIcon Kind="LogoutVariant"
                                                          Width="50" Height="50"
-                                                         Foreground="{DynamicResource PrimaryBrush}">
-
+                                                         Style="{DynamicResource PickIconStyle}">
                                 </materialDesign:PackIcon>
-                                <TextBlock Text="Log out" Margin="25,0,0,0"
+                                <TextBlock Text="{x:Static properties:Resources.TLog_out}" Margin="25,0,0,0"
                                            Style="{StaticResource NavigateTextBlockStyle}" />
                             </StackPanel>
                             <ListViewItem.InputBindings>
