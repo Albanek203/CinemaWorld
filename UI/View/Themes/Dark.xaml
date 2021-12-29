@@ -70,14 +70,14 @@
             <Setter Property="materialDesign:TextFieldAssist.UnderlineBrush" Value="#e698dd" />
         </Style.Setters>
     </Style>
-    
+
     <!-- Icons -->
     <Style x:Key="PickIconStyle" TargetType="materialDesign:PackIcon">
         <Style.Setters>
             <Setter Property="Foreground" Value="WhiteSmoke" />
         </Style.Setters>
     </Style>
-    
+
     <!-- TextBlock -->
     <Style x:Key="TitleTextStyle" TargetType="TextBlock">
         <Style.Setters>
@@ -120,6 +120,14 @@
         </Style.Resources>
     </Style>
 
+    <!-- ComboBox -->
+    <Style x:Key="ComboBoxStyle" TargetType="ComboBox" BasedOn="{StaticResource MaterialDesignComboBox}">
+        <Style.Setters>
+            <Setter Property="Foreground" Value="WhiteSmoke" />
+            <Setter Property="Padding" Value="10,0,0,0" />
+        </Style.Setters>
+    </Style>
+
     <!-- Borders -->
     <Style x:Key="InputBorderStyle" TargetType="Border">
         <Style.Setters>
@@ -143,5 +151,65 @@
                 </Setter.Value>
             </Setter>
         </Style.Setters>
+    </Style>
+
+    <!-- Navigate panel style-->
+    <Style x:Key="NavigateToggleButtonStyle" TargetType="{x:Type ToggleButton}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ToggleButton}">
+                    <materialDesign:PackIcon x:Name="Icon"
+                                             Kind="ViewSequential" Width="45" Height="45"
+                                             Style="{DynamicResource PickIconStyle}" />
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="Cursor" Value="Hand" />
+                            <Setter Property="Effect">
+                                <Setter.Value>
+                                    <DropShadowEffect BlurRadius="10"
+                                                      ShadowDepth="1"
+                                                      Direction="-90"
+                                                      Color="White" />
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                        <Trigger Property="IsChecked" Value="true">
+                            <Setter Property="Effect">
+                                <Setter.Value>
+                                    <DropShadowEffect BlurRadius="10"
+                                                      ShadowDepth="1"
+                                                      Direction="-90"
+                                                      Color="White" />
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="NavigateTextBlockStyle" TargetType="TextBlock">
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="HorizontalAlignment" Value="Left" />
+        <Setter Property="Foreground" Value="White" />
+        <Setter Property="FontSize" Value="20" />
+    </Style>
+
+    <Style x:Key="NavigateListViewItemStyle" TargetType="ListViewItem" BasedOn="{StaticResource {x:Type ListViewItem}}">
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Cursor" Value="Hand" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="NavigateListViewItemLogOutStyle" TargetType="ListViewItem"
+           BasedOn="{StaticResource NavigateListViewItemStyle}">
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="red" />
+            </Trigger>
+        </Style.Triggers>
     </Style>
 </ResourceDictionary>
