@@ -17,6 +17,7 @@ namespace UI {
     public partial class App : Application {
         private readonly string _saveUserDataPath = Directory.GetCurrentDirectory() + "\\saveLU.data";
         public static IServiceProvider ServiceProvider = null!;
+        public static Window MainWindow;
         public App() {
             var servicesCollection = new ServiceCollection();
             ConfigServices(servicesCollection);
@@ -34,9 +35,10 @@ namespace UI {
             serviceProvider.AddTransient<SessionLibraryViewModel>();
             serviceProvider.AddTransient<LoginViewModel>();
             serviceProvider.AddTransient<MainViewModel>();
+            serviceProvider.AddTransient<SellTicketViewModel>();
 
             // Pages
-            serviceProvider.AddTransient<FilmLibraryView>();
+            serviceProvider.AddTransient<SessionLibraryView>();
 
             // Views
             serviceProvider.AddTransient<LoginView>();
@@ -53,7 +55,8 @@ namespace UI {
                 curUser.Role        = user.Role;
                 curUser.ActionsData = user.ActionsData;
                 curUser.LoginData   = user.LoginData;
-                ServiceProvider.GetService<MainView>()!.Show();
+                MainWindow          = ServiceProvider.GetService<MainView>()!;
+                MainWindow.Show();
             }
             else
                 ServiceProvider.GetService<LoginView>()!.Show();
