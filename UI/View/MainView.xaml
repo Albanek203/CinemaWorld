@@ -10,11 +10,6 @@
         Style="{DynamicResource WindowStyle}"
         Name="Window" Width="1280" Height="720">
 
-    <Window.Resources>
-        <ResourceDictionary Source="Themes/Dark.xaml" />
-    </Window.Resources>
-
-
     <Border Style="{DynamicResource BackgroundBorderStyle}">
         <Grid>
             <Grid x:Name="Grid"
@@ -25,7 +20,7 @@
                     <RowDefinition Height="30" />
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
-                <Grid Grid.Row="0" Background="#99101010" MouseLeftButtonDown="UIMain_OnMouseDown">
+                <Grid Grid.Row="0" Background="{DynamicResource PrimaryBrush}" MouseLeftButtonDown="UIMain_OnMouseDown">
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                         <Button Command="{Binding CollapseWindow}"
                                 CommandParameter="{Binding ElementName=Window}"
@@ -40,7 +35,7 @@
                        NavigationUIVisibility="Hidden" />
             </Grid>
             <Grid x:Name="NavigatePanel"
-                  Background="#222222"
+                  Background="{DynamicResource PrimaryBrush}"
                   Width="65"
                   HorizontalAlignment="Left">
                 <StackPanel>
@@ -58,10 +53,11 @@
                                                   Color="White" />
                             </TextBlock.Effect>
                         </TextBlock>
-                        <ToggleButton VerticalAlignment="Center" x:Name="ToggleButton"
-                                      HorizontalAlignment="Left"
+                        <ToggleButton x:Name="ToggleButton"
                                       Height="50" Width="50"
                                       Margin="10,10,0,0"
+                                      ToolTip="{x:Static properties:Resources.TMenu}"
+                                      VerticalAlignment="Center" HorizontalAlignment="Left"
                                       Style="{DynamicResource NavigateToggleButtonStyle}">
                             <ToggleButton.Triggers>
                                 <EventTrigger RoutedEvent="ToggleButton.Unchecked">
@@ -109,7 +105,7 @@
                               Margin="0,100,0,0"
                               ScrollViewer.HorizontalScrollBarVisibility="Disabled">
 
-                        <ListViewItem HorizontalAlignment="Left" ToolTip="Home"
+                        <ListViewItem HorizontalAlignment="Left" ToolTip="{x:Static properties:Resources.THome}"
                                       Style="{DynamicResource NavigateListViewItemStyle}">
                             <StackPanel Orientation="Horizontal" Width="230">
                                 <materialDesign:PackIcon Kind="Home"
@@ -123,7 +119,7 @@
                             </ListViewItem.InputBindings>
                         </ListViewItem>
 
-                        <ListViewItem HorizontalAlignment="Left" ToolTip="Sessions"
+                        <ListViewItem HorizontalAlignment="Left" ToolTip="{x:Static properties:Resources.TSessions}"
                                       Style="{DynamicResource NavigateListViewItemStyle}">
                             <StackPanel Orientation="Horizontal" Width="230">
                                 <materialDesign:PackIcon Kind="LibraryShelves"
@@ -137,7 +133,7 @@
                             </ListViewItem.InputBindings>
                         </ListViewItem>
 
-                        <ListViewItem HorizontalAlignment="Left" ToolTip="Log out"
+                        <ListViewItem HorizontalAlignment="Left" ToolTip="{x:Static properties:Resources.TLog_out}"
                                       Style="{DynamicResource NavigateListViewItemLogOutStyle}">
                             <StackPanel Orientation="Horizontal" Width="230">
                                 <materialDesign:PackIcon Kind="LogoutVariant"
