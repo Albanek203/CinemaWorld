@@ -39,4 +39,61 @@
     <data name="TLog_out" xml:space="preserve">
         <value>Log out</value>
     </data>
+    <data name="TSearchFilm" xml:space="preserve">
+        <value>Search film</value>
+    </data>
+    <data name="TSortBy" xml:space="preserve">
+        <value>Sort by</value>
+    </data>
+    <data name="THall_" xml:space="preserve">
+        <value>Hall: </value>
+    </data>
+    <data name="TLeftSeats_" xml:space="preserve">
+        <value>Left seats: </value>
+    </data>
+    <data name="TDate_" xml:space="preserve">
+        <value>Date: </value>
+    </data>
+    <data name="TBuyTicket" xml:space="preserve">
+        <value>Buy ticket</value>
+    </data>
+    <data name="TReturn" xml:space="preserve">
+        <value>Return</value>
+    </data>
+    <data name="TNotTaken" xml:space="preserve">
+        <value>Not taken</value>
+    </data>
+    <data name="TTaken" xml:space="preserve">
+        <value>Taken</value>
+    </data>
+    <data name="TReserved" xml:space="preserve">
+        <value>Reserved</value>
+    </data>
+    <data name="TPrice" xml:space="preserve">
+        <value>Price: </value>
+    </data>
+    <data name="TSell" xml:space="preserve">
+        <value>Sell</value>
+    </data>
+    <data name="TReservation" xml:space="preserve">
+        <value>Reservation</value>
+    </data>
+    <data name="TCancel" xml:space="preserve">
+        <value>Cancel</value>
+    </data>
+    <data name="TName" xml:space="preserve">
+        <value>Name</value>
+    </data>
+    <data name="TRating" xml:space="preserve">
+        <value>Rating</value>
+    </data>
+    <data name="TCollapse" xml:space="preserve">
+        <value>Collapse</value>
+    </data>
+    <data name="TClose" xml:space="preserve">
+        <value>Close</value>
+    </data>
+    <data name="TMenu" xml:space="preserve">
+        <value>Menu</value>
+    </data>
 </root>

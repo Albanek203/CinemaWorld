@@ -24,12 +24,69 @@
         <value>М Е Н Ю</value>
     </data>
     <data name="THome" xml:space="preserve">
-        <value>Головна</value>
+        <value>Главная</value>
     </data>
     <data name="TSessions" xml:space="preserve">
         <value>Сеансы</value>
     </data>
     <data name="TLog_out" xml:space="preserve">
         <value>Выйти</value>
+    </data>
+    <data name="TSearchFilm" xml:space="preserve">
+        <value>Поиск фильма</value>
+    </data>
+    <data name="TSortBy" xml:space="preserve">
+        <value>Сортировать</value>
+    </data>
+    <data name="THall_" xml:space="preserve">
+        <value>Зал: </value>
+    </data>
+    <data name="TLeftSeats_" xml:space="preserve">
+        <value>Свободных мест: </value>
+    </data>
+    <data name="TDate_" xml:space="preserve">
+        <value>Дата: </value>
+    </data>
+    <data name="TBuyTicket" xml:space="preserve">
+        <value>Купить билет</value>
+    </data>
+    <data name="TReturn" xml:space="preserve">
+        <value>Вернуться</value>
+    </data>
+    <data name="TNotTaken" xml:space="preserve">
+        <value>Свободен</value>
+    </data>
+    <data name="TTaken" xml:space="preserve">
+        <value>Куплен</value>
+    </data>
+    <data name="TReserved" xml:space="preserve">
+        <value>Зарезервированный</value>
+    </data>
+    <data name="TPrice" xml:space="preserve">
+        <value>Цена: </value>
+    </data>
+    <data name="TSell" xml:space="preserve">
+        <value>Продать</value>
+    </data>
+    <data name="TReservation" xml:space="preserve">
+        <value>Зарезервировать</value>
+    </data>
+    <data name="TCancel" xml:space="preserve">
+        <value>Отмена</value>
+    </data>
+    <data name="TName" xml:space="preserve">
+        <value>Название</value>
+    </data>
+    <data name="TRating" xml:space="preserve">
+        <value>Рейтинг</value>
+    </data>
+    <data name="TCollapse" xml:space="preserve">
+        <value>Свернуть</value>
+    </data>
+    <data name="TClose" xml:space="preserve">
+        <value>Закрывать</value>
+    </data>
+    <data name="TMenu" xml:space="preserve">
+        <value>Меню</value>
     </data>
 </root>
