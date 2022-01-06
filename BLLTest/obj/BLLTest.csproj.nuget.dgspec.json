@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Programing\\Projects\\CinemaWorld\\BLLTest\\BLLTest.csproj": {}
+    "D:\\Projects\\CinemaWorld\\BLLTest\\BLLTest.csproj": {}
   },
   "projects": {
-    "D:\\Programing\\Projects\\CinemaWorld\\BLLTest\\BLLTest.csproj": {
+    "D:\\Projects\\CinemaWorld\\BLLTest\\BLLTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Programing\\Projects\\CinemaWorld\\BLLTest\\BLLTest.csproj",
+        "projectUniqueName": "D:\\Projects\\CinemaWorld\\BLLTest\\BLLTest.csproj",
         "projectName": "BLLTest",
-        "projectPath": "D:\\Programing\\Projects\\CinemaWorld\\BLLTest\\BLLTest.csproj",
+        "projectPath": "D:\\Projects\\CinemaWorld\\BLLTest\\BLLTest.csproj",
         "packagesPath": "C:\\Users\\olegl\\.nuget\\packages\\",
-        "outputPath": "D:\\Programing\\Projects\\CinemaWorld\\BLLTest\\obj\\",
+        "outputPath": "D:\\Projects\\CinemaWorld\\BLLTest\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\olegl\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,11 +28,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\Programing\\Projects\\CinemaWorld\\BLL\\BLL.csproj": {
-                "projectPath": "D:\\Programing\\Projects\\CinemaWorld\\BLL\\BLL.csproj"
+              "D:\\Projects\\CinemaWorld\\BLL\\BLL.csproj": {
+                "projectPath": "D:\\Projects\\CinemaWorld\\BLL\\BLL.csproj"
               },
-              "D:\\Programing\\Projects\\CinemaWorld\\DLL\\DLL.csproj": {
-                "projectPath": "D:\\Programing\\Projects\\CinemaWorld\\DLL\\DLL.csproj"
+              "D:\\Projects\\CinemaWorld\\DLL\\DLL.csproj": {
+                "projectPath": "D:\\Projects\\CinemaWorld\\DLL\\DLL.csproj"
               }
             }
           }
@@ -49,15 +49,15 @@
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[6.0.0, )"
+              "version": "[6.0.1, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[6.0.0, )"
+              "version": "[6.0.1, )"
             },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
-              "version": "[16.11.0, )"
+              "version": "[17.1.0-preview-20211130-02, )"
             },
             "coverlet.collector": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
@@ -67,7 +67,7 @@
             },
             "xunit": {
               "target": "Package",
-              "version": "[2.4.1, )"
+              "version": "[2.4.2-pre.12, )"
             },
             "xunit.runner.visualstudio": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
@@ -91,18 +91,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Programing\\Projects\\CinemaWorld\\BLL\\BLL.csproj": {
+    "D:\\Projects\\CinemaWorld\\BLL\\BLL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Programing\\Projects\\CinemaWorld\\BLL\\BLL.csproj",
+        "projectUniqueName": "D:\\Projects\\CinemaWorld\\BLL\\BLL.csproj",
         "projectName": "BLL",
-        "projectPath": "D:\\Programing\\Projects\\CinemaWorld\\BLL\\BLL.csproj",
+        "projectPath": "D:\\Projects\\CinemaWorld\\BLL\\BLL.csproj",
         "packagesPath": "C:\\Users\\olegl\\.nuget\\packages\\",
-        "outputPath": "D:\\Programing\\Projects\\CinemaWorld\\BLL\\obj\\",
+        "outputPath": "D:\\Projects\\CinemaWorld\\BLL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\olegl\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -119,8 +119,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\Programing\\Projects\\CinemaWorld\\DLL\\DLL.csproj": {
-                "projectPath": "D:\\Programing\\Projects\\CinemaWorld\\DLL\\DLL.csproj"
+              "D:\\Projects\\CinemaWorld\\DLL\\DLL.csproj": {
+                "projectPath": "D:\\Projects\\CinemaWorld\\DLL\\DLL.csproj"
               }
             }
           }
@@ -149,18 +149,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Programing\\Projects\\CinemaWorld\\DLL\\DLL.csproj": {
+    "D:\\Projects\\CinemaWorld\\DLL\\DLL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Programing\\Projects\\CinemaWorld\\DLL\\DLL.csproj",
+        "projectUniqueName": "D:\\Projects\\CinemaWorld\\DLL\\DLL.csproj",
         "projectName": "DLL",
-        "projectPath": "D:\\Programing\\Projects\\CinemaWorld\\DLL\\DLL.csproj",
+        "projectPath": "D:\\Projects\\CinemaWorld\\DLL\\DLL.csproj",
         "packagesPath": "C:\\Users\\olegl\\.nuget\\packages\\",
-        "outputPath": "D:\\Programing\\Projects\\CinemaWorld\\DLL\\obj\\",
+        "outputPath": "D:\\Projects\\CinemaWorld\\DLL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\olegl\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -191,7 +191,7 @@
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[6.0.0, )"
+              "version": "[6.0.1, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",
@@ -213,7 +213,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
