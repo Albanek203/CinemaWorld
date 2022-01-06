@@ -5,7 +5,7 @@ namespace BLL.Services {
     public class LoginService {
         private readonly LoginDataRepository _repository;
         public LoginService(LoginDataRepository repository) { _repository = repository; }
-        public async Task<User?> Login(string login, string? password) {
+        public async Task<User?> LoginAsync(string login, string? password) {
             List<LoginData> data;
             try {
                 data = (await _repository.FindByConditionAsync(x => login.Contains('@') == true
