@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "+R6i0EYORlbjENh2pkS2kDF4VxwadC1gwYMdMPUOIhaPDKDjnEhmO9MLFa0wnwCgxjdcLYn/y4D1T0nBmZZhRA==",
+  "dgSpecHash": "TiILI/AwmwfWvG0oWvJC8JaCY5fIPNUmzzUOfR6zdb70F7tdPzDWVFGZOUllnNWeKJENegSrR1YvfFFHQXJzxg==",
   "success": true,
-  "projectFilePath": "D:\\Programing\\Projects\\CinemaWorld\\BLL\\BLL.csproj",
+  "projectFilePath": "D:\\Projects\\CinemaWorld\\BLL\\BLL.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\olegl\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.0\\microsoft.entityframeworkcore.6.0.0.nupkg.sha512",
-    "C:\\Users\\olegl\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.0\\microsoft.entityframeworkcore.abstractions.6.0.0.nupkg.sha512",
-    "C:\\Users\\olegl\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\6.0.0\\microsoft.entityframeworkcore.analyzers.6.0.0.nupkg.sha512",
+    "C:\\Users\\olegl\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.1\\microsoft.entityframeworkcore.6.0.1.nupkg.sha512",
+    "C:\\Users\\olegl\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.1\\microsoft.entityframeworkcore.abstractions.6.0.1.nupkg.sha512",
+    "C:\\Users\\olegl\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\6.0.1\\microsoft.entityframeworkcore.analyzers.6.0.1.nupkg.sha512",
     "C:\\Users\\olegl\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\6.0.0\\microsoft.extensions.caching.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\olegl\\.nuget\\packages\\microsoft.extensions.caching.memory\\6.0.0\\microsoft.extensions.caching.memory.6.0.0.nupkg.sha512",
     "C:\\Users\\olegl\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\6.0.0\\microsoft.extensions.dependencyinjection.6.0.0.nupkg.sha512",
