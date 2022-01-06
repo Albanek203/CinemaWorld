@@ -1,0 +1,283 @@
+﻿<Page x:Class="UI.View.Pages.SessionLibraryView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:converters="clr-namespace:UI.Converters"
+      xmlns:properties="clr-namespace:UI.Properties"
+      mc:Ignorable="d" Height="690" Width="1220">
+
+    <Page.Resources>
+        <converters:NonTakenSeatConverter x:Key="NonTakenSeatConverter" />
+        <converters:SeatStatusConverter x:Key="SeatStatusConverter" />
+    </Page.Resources>
+
+    <Grid>
+        <Grid Visibility="{Binding LibraryVisibility}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Border Grid.Column="0" BorderThickness="0,0,1,0" BorderBrush="Black">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Border Grid.Row="0" Background="#99101010">
+                        <DockPanel Margin="10">
+                            <StackPanel Orientation="Horizontal">
+                                <materialDesign:PackIcon Kind="Magnify" Width="30" Height="30"
+                                                         VerticalAlignment="Center"
+                                                         Style="{DynamicResource PickIconStyle}" />
+                                <TextBox VerticalAlignment="Center" HorizontalAlignment="Center"
+                                         FontSize="18"
+                                         Width="300"
+                                         Margin="5,0,0,0"
+                                         Text="{Binding SearchFilm, UpdateSourceTrigger=PropertyChanged}"
+                                         Style="{DynamicResource InputTextBoxStyle}"
+                                         materialDesign:HintAssist.Hint="{x:Static properties:Resources.TSearchFilm}" />
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" DockPanel.Dock="Right">
+                                <TextBlock Text="{x:Static properties:Resources.TSortBy}"
+                                           Margin="10,0,0,0" FontSize="18"
+                                           VerticalAlignment="Bottom" HorizontalAlignment="Center"
+                                           Style="{DynamicResource SimpleTextStyle}" />
+                                <ComboBox Margin="10,0,0,0" FontSize="18"
+                                          SelectedIndex="{Binding LstFilmSortIndex}"
+                                          ItemsSource="{Binding FilmSortBy, UpdateSourceTrigger=PropertyChanged}"
+                                          Style="{DynamicResource  ComboBoxStyle}" />
+                            </StackPanel>
+                        </DockPanel>
+                    </Border>
+                    <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" Margin="10">
+                        <ItemsControl ItemsSource="{Binding ListFilms, UpdateSourceTrigger=PropertyChanged}"
+                                      HorizontalAlignment="Center">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <materialDesign:Card Width="550" Height="50" Margin="0,10,0,0">
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*" />
+                                                <ColumnDefinition Width="Auto" />
+                                                <ColumnDefinition Width="Auto" />
+                                            </Grid.ColumnDefinitions>
+                                            <TextBlock VerticalAlignment="Center" Margin="10,0,0,0"
+                                                       Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}"
+                                                       Style="{DynamicResource SimpleTextStyle}" />
+                                            <StackPanel Grid.Column="1"
+                                                        Orientation="Horizontal"
+                                                        HorizontalAlignment="Center"
+                                                        VerticalAlignment="Center">
+                                                <TextBlock VerticalAlignment="Center"
+                                                           Text="{Binding Rating, UpdateSourceTrigger=PropertyChanged}"
+                                                           Style="{DynamicResource  SimpleTextStyle}" />
+                                                <TextBlock VerticalAlignment="Center"
+                                                           Text="&#160;/ 5&#160;"
+                                                           Style="{DynamicResource SimpleTextStyle}" />
+                                                <materialDesign:PackIcon Kind="Star" Width="30" Height="30"
+                                                                         Foreground="Gold" />
+                                            </StackPanel>
+                                            <Button Grid.Column="2"
+                                                    Margin="5,0"
+                                                    Padding="-5"
+                                                    Style="{DynamicResource TransparentButtonStyle}"
+                                                    materialDesign:ButtonAssist.CornerRadius="360"
+                                                    Command="{Binding RelativeSource={RelativeSource AncestorType=
+                                                              {x:Type ItemsControl}},Path=DataContext.ShowSessions}"
+                                                    CommandParameter="{Binding Id}">
+                                                <materialDesign:PackIcon Kind="ArrowRightThick" Width="45" Height="40"
+                                                                         Style="{DynamicResource PickIconStyle}" />
+                                            </Button>
+                                        </Grid>
+                                    </materialDesign:Card>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </ScrollViewer>
+                </Grid>
+            </Border>
+            <Grid Grid.Column="1" Margin="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <TextBlock Text="{Binding FilmName}"
+                           HorizontalAlignment="Center"
+                           Style="{DynamicResource TitleTextStyle}" />
+                <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+                    <ItemsControl ItemsSource="{Binding ListSessions, UpdateSourceTrigger=PropertyChanged}"
+                                  HorizontalAlignment="Center">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <materialDesign:Card Width="550" Height="100"
+                                                     Margin="0,10,0,0" Padding="10">
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="1.2*" />
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+                                        <StackPanel Grid.Column="0">
+                                            <StackPanel Orientation="Horizontal">
+                                                <TextBlock Text="{x:Static properties:Resources.THall_}"
+                                                           Style="{DynamicResource SimpleTextStyle}" />
+                                                <TextBlock
+                                                    Text="{Binding HallNumber, UpdateSourceTrigger=PropertyChanged}"
+                                                    Style="{DynamicResource SimpleTextStyle}" />
+                                            </StackPanel>
+                                            <StackPanel Orientation="Horizontal">
+                                                <TextBlock Text="{x:Static properties:Resources.TLeftSeats_}"
+                                                           Style="{DynamicResource SimpleTextStyle}" />
+                                                <TextBlock
+                                                    Text="{Binding Seats, 
+                                                Converter={StaticResource NonTakenSeatConverter}}"
+                                                    Style="{DynamicResource SimpleTextStyle}" />
+                                            </StackPanel>
+                                            <StackPanel Orientation="Horizontal">
+                                                <TextBlock Text="{x:Static properties:Resources.TDate_}"
+                                                           Style="{DynamicResource SimpleTextStyle}" />
+                                                <TextBlock
+                                                    Text="{Binding DateSession, UpdateSourceTrigger=PropertyChanged}"
+                                                    Style="{DynamicResource SimpleTextStyle}" />
+                                            </StackPanel>
+                                        </StackPanel>
+                                        <Button Grid.Column="1"
+                                                Height="50" Width="200"
+                                                Content="{x:Static properties:Resources.TBuyTicket}"
+                                                Style="{DynamicResource DropShadowButtonStyle}"
+                                                Command="{Binding RelativeSource={RelativeSource AncestorType=
+                                                              {x:Type ItemsControl}},Path=DataContext.BuyTicket}"
+                                                CommandParameter="{Binding Id}">
+                                        </Button>
+                                    </Grid>
+                                </materialDesign:Card>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </ScrollViewer>
+            </Grid>
+        </Grid>
+        <Border Visibility="{Binding SeatsPanelVisibility}" Style="{DynamicResource BackgroundBorderStyle}">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="60" />
+                </Grid.RowDefinitions>
+                <Polygon Fill="{DynamicResource PrimaryBrush}"
+                         Points="1220,0,0,0,0,40,270,40,320,80,900,80,950,40,1220,40" />
+                <StackPanel Grid.Row="0"
+                            Orientation="Horizontal"
+                            VerticalAlignment="Top">
+                    <Button Height="40" Width="40" Padding="-5"
+                            ToolTip="{x:Static properties:Resources.TReturn}"
+                            Command="{Binding Return}"
+                            CommandParameter="{Binding ElementName=Window, UpdateSourceTrigger=PropertyChanged}"
+                            Style="{DynamicResource TransparentButtonStyle}">
+                        <materialDesign:PackIcon Kind="ArrowLeftThick" Width="45" Height="40"
+                                                 Style="{DynamicResource PickIconStyle}" />
+                    </Button>
+                </StackPanel>
+                <StackPanel Grid.Row="0"
+                            Margin="0,0,0,10"
+                            Orientation="Horizontal"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Bottom">
+                    <Border BorderBrush="Black"
+                            BorderThickness="1"
+                            Margin="0,0,10,0"
+                            Height="20" Width="20">
+                        <Rectangle Fill="White" />
+                    </Border>
+                    <TextBlock VerticalAlignment="Center"
+                               Text="{x:Static properties:Resources.TNotTaken}"
+                               Style="{DynamicResource   SimpleTextStyle}" />
+                    <Border BorderBrush="Black"
+                            BorderThickness="1"
+                            Margin="30,0,10,0"
+                            Height="20" Width="20">
+                        <Rectangle Fill="Red" />
+                    </Border>
+                    <TextBlock VerticalAlignment="Center"
+                               Text="{x:Static properties:Resources.TTaken}"
+                               Style="{DynamicResource   SimpleTextStyle}" />
+                    <Border BorderBrush="Black"
+                            BorderThickness="1"
+                            Margin="30,0,10,0"
+                            Height="20" Width="20">
+                        <Rectangle Fill="Gray" />
+                    </Border>
+                    <TextBlock VerticalAlignment="Center"
+                               Text="{x:Static properties:Resources.TReserved}"
+                               Style="{DynamicResource   SimpleTextStyle}" />
+                </StackPanel>
+                <StackPanel Grid.Row="1" VerticalAlignment="Center">
+                    <ItemsControl
+                        ItemsSource="{Binding CurrentSession.Seats, UpdateSourceTrigger=PropertyChanged}">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <UniformGrid Columns="11" Width="800" Height="540" />
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                        <ItemsControl.ItemTemplate>
+                            <ItemContainerTemplate>
+                                <Button Name="SeatButton"
+                                        Content="{Binding Number}"
+                                        Background="{Binding Status, UpdateSourceTrigger=LostFocus,Converter={StaticResource SeatStatusConverter}}"
+                                        Command="{Binding RelativeSource={RelativeSource AncestorType=
+                                                              {x:Type ItemsControl}},Path=DataContext.SelectTicket}"
+                                        CommandParameter="{Binding  ElementName=SeatButton}"
+                                        Style="{DynamicResource SeatButtonStyle}" />
+                            </ItemContainerTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </StackPanel>
+                <Grid Grid.Row="2" HorizontalAlignment="Center"
+                      Visibility="{Binding SeatInfoVisibility}">
+                    <Polygon Fill="{DynamicResource PrimaryBrush}"
+                             Points="700,0,50,0,0,60,750,60" />
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Border BorderBrush="Black"
+                                BorderThickness="1"
+                                Margin="0,0,20,0"
+                                Height="40" Width="40">
+                            <Rectangle Fill="{Binding SelectedTicketFill, UpdateSourceTrigger=PropertyChanged}" />
+                        </Border>
+                        <StackPanel VerticalAlignment="Center">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="№&#160;"
+                                           Style="{DynamicResource SimpleTextStyle}" />
+                                <TextBlock Text="{Binding SelectedSeat.Number, UpdateSourceTrigger=PropertyChanged}"
+                                           Style="{DynamicResource SimpleTextStyle}" />
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="{x:Static properties:Resources.TPrice}"
+                                           Style="{DynamicResource SimpleTextStyle}" />
+                                <TextBlock Text="{Binding SelectedSeat.Price, UpdateSourceTrigger=PropertyChanged}"
+                                           Style="{DynamicResource SimpleTextStyle}" />
+                            </StackPanel>
+                        </StackPanel>
+                        <Button Margin="20,0,0,0"
+                                Content="{x:Static properties:Resources.TSell}"
+                                Style="{DynamicResource DropShadowButtonStyle}"
+                                Command="{Binding TicketManipulation}"
+                                CommandParameter="Sell" />
+                        <Button Margin="20,0,0,0"
+                                Content="{x:Static properties:Resources.TReservation}"
+                                Style="{DynamicResource DropShadowButtonStyle}"
+                                Command="{Binding TicketManipulation}"
+                                CommandParameter="Reserved" />
+                        <Button Margin="20,0,0,0"
+                                Content="{x:Static properties:Resources.TCancel}"
+                                Style="{DynamicResource DropShadowButtonStyle}"
+                                Command="{Binding TicketManipulation}"
+                                CommandParameter="Cancel" />
+                    </StackPanel>
+                </Grid>
+            </Grid>
+        </Border>
+    </Grid>
+
+
+</Page>
