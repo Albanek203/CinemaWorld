@@ -15,7 +15,7 @@ namespace UI {
     /// Interaction logic for App.xaml
     /// </summary>
     public partial class App : Application {
-        private readonly string _saveUserDataPath = Directory.GetCurrentDirectory() + "\\saveLU.data";
+        public static readonly string SaveUserDataPath = Directory.GetCurrentDirectory() + "\\saveLU.data";
         public static IServiceProvider ServiceProvider = null!;
         public static Window MainWindow;
         public App() {
@@ -46,8 +46,8 @@ namespace UI {
         private void App_OnStartup(object sender, StartupEventArgs e) {
             // Initialize themes
             var viewModelTheme = ServiceProvider.GetService<ThemeViewModel>();
-            if (File.Exists(_saveUserDataPath)) {
-                var user    = JsonConvert.DeserializeObject<User>(File.ReadAllText(_saveUserDataPath));
+            if (File.Exists(SaveUserDataPath)) {
+                var user    = JsonConvert.DeserializeObject<User>(File.ReadAllText(SaveUserDataPath));
                 var curUser = ServiceProvider.GetService<User>();
                 curUser!.Id         = user!.Id;
                 curUser.Person      = user.Person;
