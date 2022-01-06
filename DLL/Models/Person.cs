@@ -6,6 +6,7 @@
         public float    Salary       { get; set; }
         public DateTime BirthDate    { get; set; }
         public DateTime EmployeeDate { get; set; }
-        public User?    User         { get; set; }
+        [Newtonsoft.Json.JsonIgnore]
+        public User? User { get; set; }
     }
 }
