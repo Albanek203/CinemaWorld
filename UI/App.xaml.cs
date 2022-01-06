@@ -35,7 +35,6 @@ namespace UI {
             serviceProvider.AddTransient<SessionLibraryViewModel>();
             serviceProvider.AddTransient<LoginViewModel>();
             serviceProvider.AddTransient<MainViewModel>();
-            serviceProvider.AddTransient<SellTicketViewModel>();
 
             // Pages
             serviceProvider.AddTransient<SessionLibraryView>();

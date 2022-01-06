@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Programing\\Projects\\CinemaWorld\\UI\\UI.csproj": {}
+    "D:\\Projects\\CinemaWorld\\UI\\UI.csproj": {}
   },
   "projects": {
-    "D:\\Programing\\Projects\\CinemaWorld\\BLL\\BLL.csproj": {
+    "D:\\Projects\\CinemaWorld\\BLL\\BLL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Programing\\Projects\\CinemaWorld\\BLL\\BLL.csproj",
+        "projectUniqueName": "D:\\Projects\\CinemaWorld\\BLL\\BLL.csproj",
         "projectName": "BLL",
-        "projectPath": "D:\\Programing\\Projects\\CinemaWorld\\BLL\\BLL.csproj",
+        "projectPath": "D:\\Projects\\CinemaWorld\\BLL\\BLL.csproj",
         "packagesPath": "C:\\Users\\olegl\\.nuget\\packages\\",
-        "outputPath": "D:\\Programing\\Projects\\CinemaWorld\\BLL\\obj\\",
+        "outputPath": "D:\\Projects\\CinemaWorld\\BLL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\olegl\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\Programing\\Projects\\CinemaWorld\\DLL\\DLL.csproj": {
-                "projectPath": "D:\\Programing\\Projects\\CinemaWorld\\DLL\\DLL.csproj"
+              "D:\\Projects\\CinemaWorld\\DLL\\DLL.csproj": {
+                "projectPath": "D:\\Projects\\CinemaWorld\\DLL\\DLL.csproj"
               }
             }
           }
@@ -58,18 +58,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Programing\\Projects\\CinemaWorld\\DLL\\DLL.csproj": {
+    "D:\\Projects\\CinemaWorld\\DLL\\DLL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Programing\\Projects\\CinemaWorld\\DLL\\DLL.csproj",
+        "projectUniqueName": "D:\\Projects\\CinemaWorld\\DLL\\DLL.csproj",
         "projectName": "DLL",
-        "projectPath": "D:\\Programing\\Projects\\CinemaWorld\\DLL\\DLL.csproj",
+        "projectPath": "D:\\Projects\\CinemaWorld\\DLL\\DLL.csproj",
         "packagesPath": "C:\\Users\\olegl\\.nuget\\packages\\",
-        "outputPath": "D:\\Programing\\Projects\\CinemaWorld\\DLL\\obj\\",
+        "outputPath": "D:\\Projects\\CinemaWorld\\DLL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\olegl\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -100,7 +100,7 @@
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[6.0.0, )"
+              "version": "[6.0.1, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",
@@ -122,18 +122,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Programing\\Projects\\CinemaWorld\\UI\\UI.csproj": {
+    "D:\\Projects\\CinemaWorld\\UI\\UI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Programing\\Projects\\CinemaWorld\\UI\\UI.csproj",
+        "projectUniqueName": "D:\\Projects\\CinemaWorld\\UI\\UI.csproj",
         "projectName": "UI",
-        "projectPath": "D:\\Programing\\Projects\\CinemaWorld\\UI\\UI.csproj",
+        "projectPath": "D:\\Projects\\CinemaWorld\\UI\\UI.csproj",
         "packagesPath": "C:\\Users\\olegl\\.nuget\\packages\\",
-        "outputPath": "D:\\Programing\\Projects\\CinemaWorld\\UI\\obj\\",
+        "outputPath": "D:\\Projects\\CinemaWorld\\UI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\olegl\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -150,8 +150,8 @@
           "net6.0-windows7.0": {
             "targetAlias": "net6.0-windows",
             "projectReferences": {
-              "D:\\Programing\\Projects\\CinemaWorld\\BLL\\BLL.csproj": {
-                "projectPath": "D:\\Programing\\Projects\\CinemaWorld\\BLL\\BLL.csproj"
+              "D:\\Projects\\CinemaWorld\\BLL\\BLL.csproj": {
+                "projectPath": "D:\\Projects\\CinemaWorld\\BLL\\BLL.csproj"
               }
             }
           }
@@ -166,21 +166,29 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "dependencies": {
+            "InteractivityNET": {
+              "target": "Package",
+              "version": "[0.1.0-dev, )"
+            },
             "JetBrains.Annotations": {
               "target": "Package",
               "version": "[2021.3.0, )"
             },
             "MaterialDesignThemes": {
               "target": "Package",
-              "version": "[4.4.0-ci16-ci16, )"
+              "version": "[4.4.0-ci32-ci32, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[6.0.0, )"
+              "version": "[6.0.1, )"
             },
             "Microsoft.Extensions.DependencyInjection": {
               "target": "Package",
               "version": "[6.0.0, )"
+            },
+            "Microsoft.VisualBasic": {
+              "target": "Package",
+              "version": "[10.4.0-preview.18571.3, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",
@@ -205,7 +213,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
