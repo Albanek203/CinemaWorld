@@ -13,8 +13,6 @@ using UI.View;
 
 namespace UI.ViewModel {
     public class LoginViewModel : WindowViewModel {
-        private readonly string _saveUserDataPath = Directory.GetCurrentDirectory() + "\\saveLU.data";
-        private Window? _currentWindow;
         private readonly LoginService _loginService;
         public LoginViewModel(LoginService loginService) { _loginService = loginService; }
         private string _userLogin;
@@ -55,7 +53,7 @@ namespace UI.ViewModel {
             if (IsSaveUser) {
                 try {
                     var jsonString = JsonConvert.SerializeObject(user);
-                    await File.WriteAllTextAsync(_saveUserDataPath, jsonString);
+                    await File.WriteAllTextAsync(App.SaveUserDataPath, jsonString);
                 } catch (Exception e) {
                     Debug.Write(e.Message);
                     return;
@@ -68,7 +66,7 @@ namespace UI.ViewModel {
             curUser.ActionsData = user.ActionsData;
             curUser.LoginData   = user.LoginData;
             App.ServiceProvider.GetService<MainView>()!.Show();
-            _currentWindow!.Close();
+            CurrentWindow!.Close();
         }
         private bool CanExecuteAuthorization(object obj) {
             var password = (obj as PasswordBox)!.Password;
