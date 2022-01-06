@@ -7,14 +7,10 @@ namespace UI.Converters {
         public object Convert(object                           value
                             , Type                             targetType
                             , object                           parameter
-                            , System.Globalization.CultureInfo culture) {
-            return (GenreType)value;
-        }
+                            , System.Globalization.CultureInfo culture) => (GenreType)value;
         public object ConvertBack(object                           value
                                 , Type                             targetType
                                 , object                           parameter
-                                , System.Globalization.CultureInfo culture) {
-            return null;
-        }
+                                , System.Globalization.CultureInfo culture) => null!;
     }
 }
