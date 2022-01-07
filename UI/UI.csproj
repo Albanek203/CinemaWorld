@@ -46,4 +46,24 @@
       </Compile>
     </ItemGroup>
 
+    <ItemGroup>
+      <None Remove="View\Pages\HomeView.xaml~" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Images\icon.png" />
+      <Content Include="Images\icon.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Images\cinema.png" />
+      <Content Include="Images\cinema.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Images\welcome.png" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Fonts\DSEG7ClassicMini-Italic.ttf" />
+    </ItemGroup>
+
 </Project>
