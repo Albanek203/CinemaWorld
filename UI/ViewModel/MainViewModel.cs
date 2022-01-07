@@ -9,9 +9,12 @@ namespace UI.ViewModel {
     public class MainViewModel : WindowViewModel {
         private readonly SessionLibraryView _sessionLibraryView;
         private readonly LoginView _loginView;
-        public MainViewModel(SessionLibraryView sessionLibraryView, LoginView loginView) {
+        private readonly HomeView _homeView;
+        public MainViewModel(SessionLibraryView sessionLibraryView, LoginView loginView, HomeView homeView) {
             _sessionLibraryView = sessionLibraryView;
             _loginView          = loginView;
+            _homeView           = homeView;
+            CurrentPage         = homeView;
         }
         private Page _currentPage;
         public Page CurrentPage {
@@ -21,6 +24,10 @@ namespace UI.ViewModel {
                 OnPropertyChanged(nameof(CurrentPage));
             }
         }
+        private RelayCommand _showHome;
+        public ICommand ShowHome => _showHome ??= new RelayCommand(ExecuteShowHome, CanExecuteShowHome);
+        private void ExecuteShowHome(object    obj) { CurrentPage = _homeView; }
+        private bool CanExecuteShowHome(object obj) => true;
         private RelayCommand _showFilmLibrary;
         public ICommand ShowFilmLibrary =>
             _showFilmLibrary ??= new RelayCommand(ExecuteShowFilmLibrary, CanExecuteShowFilmLibrary);
