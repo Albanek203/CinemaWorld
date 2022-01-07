@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using UI.Infrastructure;
@@ -10,6 +11,7 @@ namespace UI.ViewModel {
         public HomeViewModel() {
             Task.Factory.StartNew(() => {
                 while (true) {
+                    Thread.Sleep(1000);
                     var date = DateTime.Now;
                     Hour   = date.Hour;
                     Minute = date.Minute;
