@@ -12,7 +12,6 @@
         </Grid.RowDefinitions>
 
         <Grid Grid.Row="0" HorizontalAlignment="Center">
-            <!-- Displays the actual time in red-->
             <StackPanel Orientation="Horizontal" Margin="2">
                 <TextBlock Opacity="0.6" Style="{DynamicResource ClockNumberStyle}"
                            Text="{Binding Hour, FallbackValue=00, StringFormat=00}" />
