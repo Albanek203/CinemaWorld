@@ -38,6 +38,7 @@ namespace UI {
 
             // Pages
             serviceProvider.AddTransient<SessionLibraryView>();
+            serviceProvider.AddTransient<HomeView>();
 
             // Views
             serviceProvider.AddTransient<LoginView>();
